@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 
-namespace Tenaris.Fava.Production.Reporting.UI.WPF
+namespace Tenaris.Fava.Production.Reporting.View
 {
     /// <summary>
     /// Interaction logic for App.xaml
