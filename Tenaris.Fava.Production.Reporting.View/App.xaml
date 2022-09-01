@@ -2,11 +2,13 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Tenaris.Fava.Production.Reporting.View"
-             StartupUri="MainWindow.xaml">
+             StartupUri="ProductionReport.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Tenaris.Library.UI.Framework;component/Themes/Elements/Styles.xaml"/>
+                <ResourceDictionary Source="/Resources/Global.xaml" />
+                <ResourceDictionary Source="/Tenaris.Library.UI.Framework;component/Themes/Elements/Styles.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>
