@@ -38,6 +38,11 @@ namespace Tenaris.Fava.Production.Reporting.View
             XmlLanguage.GetLanguage(CultureInfo.CurrentCulture.IetfLanguageTag)));
         }
 
+        public void InitializeMainWindow()
+        {
+
+        }
+
         private void AppDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             //e.Exception.Trace();
