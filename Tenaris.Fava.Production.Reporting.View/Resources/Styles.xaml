@@ -32,6 +32,9 @@
         </DockPanel>
     </ControlTemplate>
 
+    
+
+
     <Style x:Key="TextBlockMessageHighRelevance" TargetType="{x:Type TextBlock}">
         <Setter Property="Background"       Value="#FFFFFFFF"/>
         <Setter Property="Foreground"       Value="#FFDE1D1D"/>
