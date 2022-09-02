@@ -59,9 +59,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Tenaris.Fava.Production.Reporting.Languages">
-      <HintPath>..\Tenaris.Fava.Production.Reporting.Languages\bin\Debug\Tenaris.Fava.Production.Reporting.Languages.dll</HintPath>
-    </Reference>
     <Reference Include="Tenaris.Library.Framework">
       <HintPath>..\packages\Tenaris.Library.Framework.4.1.2\lib\net40\Tenaris.Library.Framework.dll</HintPath>
     </Reference>
@@ -80,6 +77,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="IndBoxReportConfirmationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -87,6 +88,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IndBoxReportConfirmationView.xaml.cs">
+      <DependentUpon>IndBoxReportConfirmationView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -145,6 +149,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tenaris.Fava.Production.Reporting.Languages\Tenaris.Fava.Production.Reporting.Languages.csproj">
+      <Project>{8ae28e94-3236-46a5-b054-361f72dfc194}</Project>
+      <Name>Tenaris.Fava.Production.Reporting.Languages</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
