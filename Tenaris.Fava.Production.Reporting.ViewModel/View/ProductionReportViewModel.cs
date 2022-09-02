@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tenaris.Fava.Production.Reporting.ViewModel
+namespace Tenaris.Fava.Production.Reporting.ViewModel.View
 {
-    public class Class1
+    public class ProductionReportViewModel
     {
+
     }
 }

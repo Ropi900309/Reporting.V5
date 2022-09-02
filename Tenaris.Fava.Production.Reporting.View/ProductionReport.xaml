@@ -35,8 +35,10 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
@@ -55,41 +57,73 @@
 
             <Label Grid.Row="1" Grid.ColumnSpan="16" Style="{StaticResource ButtonsArea}">
                 <StackPanel Orientation="Horizontal">
-                    <Button Content="Buscar" />
-                    <Button Content="Bloquear"/>
-                    <Button Content="Desbloquear"/>
+                    <Button Content="Buscar" framework:Image.Source="/Tenaris.Library.UI.Framework;Component/Images/Common/Size_16/icon_search.png"/>
+                    <Button Content="Bloquear" framework:Image.Source="/Tenaris.Library.UI.Framework;Component/Images/Common/Size_16/icon_block.png"/>
+                    <Button Content="Desbloquear" framework:Image.Source="/Tenaris.Library.UI.Framework;Component/Images/Common/Size_16/icon_unblock.png" Width="150"/>
                 </StackPanel>
             </Label>
 
             <Label Grid.Row="2" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Atados por reportar"/>
 
-            <Label Grid.Row="3" Grid.ColumnSpan="16" Style="{StaticResource SubHeader}">
-                <StackPanel Orientation="Horizontal">
-                    <Label Content="No. de resultados:" Margin="0, 0, 10, 0"/>
-                    <Label Content="10" Margin="0, 0, 10, 0"/>
-                </StackPanel>
-            </Label>
+            <Label Grid.Row="3" Grid.ColumnSpan="16" Style="{StaticResource SubHeader}" Content="No. de resultados: 10"/>
 
-            <DataGrid Grid.Row="4" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+            <DataGrid Grid.Row="4" Grid.ColumnSpan="16" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
                                   CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"
                                   SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" 
                                   HeadersVisibility="Column" RowDetailsVisibilityMode="Collapsed" ItemsSource="{Binding ListLockVerificationHistory}"
                                   AreRowDetailsFrozen="False" AllowDrop="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#666666"                                  
-                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="11">
+                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="12">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding  NameStatusLockVerification}" Header="{Binding Status, Source={StaticResource LanguageResources}}" Width="100" />
-                    <DataGridTextColumn Binding="{Binding  LastInspectionDate}" Header="{Binding DateInspection, Source={StaticResource LanguageResources}}" Width="150"  />
-                    <DataGridTextColumn Binding="{Binding  UserAuthorization}" Header="{Binding Authorization, Source={StaticResource LanguageResources}}" Width="150"  />
-                    <DataGridTextColumn Binding="{Binding  Comments}" Header="{Binding Comments, Source={StaticResource LanguageResources}}" Width="200"  />
-                    <DataGridTextColumn Binding="{Binding  UserLoggedIn}" Header="{Binding LoggedIn, Source={StaticResource LanguageResources}}" Width="150"  />
-                    <DataGridTextColumn Binding="{Binding  OpenDateTime}" Header="{Binding OpenDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
-                    <DataGridTextColumn Binding="{Binding  AcceptDateTime}" Header="{Binding AcceptDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
-                    <DataGridTextColumn Binding="{Binding  idTrackingLock}" Header="{Binding TrackingLock, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Header="No." Width="50" />
+                    <DataGridTextColumn Header="Máquina" Width="*"/>
+                    <DataGridTextColumn Header="Orden" Width="55"/>
+                    <DataGridTextColumn Header="Colada" Width="55"/>
+                    <DataGridTextColumn Header="Atado" Width="55"/>
+                    <DataGridTextColumn Header="Lote" Width="55"/>
+                    <DataGridTextColumn Header="Cantidad total" Width="*"/>
+                    <DataGridTextColumn Header="Piezas buenas" Width="*"/>
+                    <DataGridTextColumn Header="Piezas malas" Width="*"/>
+                    <DataGridTextColumn Header="Piezas alertadas" Width="*"/>
+                    <DataGridTextColumn Header="Piezas reprocesadas" Width="*"/>
+                    <DataGridTextColumn Header="Almacen" Width="*"/>
+                    <DataGridTextColumn Header="Tipo envío" Width="*"  />
+                    <DataGridTextColumn Header="Enviado" Width="*"  />
+                    <DataGridTextColumn Header="Secuencia" Width="*"  />
+                    <DataGridTextColumn Header="Extremo" Width="*"  />
                 </DataGrid.Columns>
             </DataGrid>
 
-            <Label Grid.Row="5" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Histórico de reportes a producción"/>
+            <Label Grid.Row="5" Grid.ColumnSpan="16" Style="{StaticResource ButtonsArea}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Reportar" framework:Image.Source="/Tenaris.Library.UI.Framework;Component/Images/Common/Size_16/icon_send_info.png"/>
+                </StackPanel>
+            </Label>
 
+            <Label Grid.Row="6" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Histórico de reportes a producción"/>
+
+            <DataGrid Grid.Row="7" Grid.ColumnSpan="16" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"
+                                  SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" 
+                                  HeadersVisibility="Column" RowDetailsVisibilityMode="Collapsed" ItemsSource="{Binding ListLockVerificationHistory}"
+                                  AreRowDetailsFrozen="False" AllowDrop="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#666666"                                  
+                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="12">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Operación" Width="*"/>
+                    <DataGridTextColumn Header="Orden" Width="*"/>
+                    <DataGridTextColumn Header="Colada" Width="*"/>
+                    <DataGridTextColumn Header="Atado" Width="*"/>
+                    <DataGridTextColumn Header="Tipo envío" Width="*"/>
+                    <DataGridTextColumn Header="Total" Width="*"/>
+                    <DataGridTextColumn Header="Buenas" Width="*"/>
+                    <DataGridTextColumn Header="Descartes" Width="*"/>
+                    <DataGridTextColumn Header="Fecha envío" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <StatusBar Grid.Row="8" Grid.ColumnSpan="16" Style="{StaticResource ButtonsArea}">
+                <Label Content="skjdbvksdvkjd"/>
+            </StatusBar>
+            
         </Grid>
 
     </DockPanel>

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tenaris.Fava.Production.Reporting.Model
+namespace Tenaris.Fava.Production.Reporting.ViewModel.Dialog
 {
-    public class Class1
+    public class PaintingReportConfirmationViewModel
     {
+
     }
 }
