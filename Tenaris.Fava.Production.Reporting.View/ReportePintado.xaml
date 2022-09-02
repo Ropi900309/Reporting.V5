@@ -1,0 +1,137 @@
+﻿<Window x:Class="Tenaris.Fava.Production.Reporting.View.ReportePintado"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tenaris.Fava.Production.Reporting.View"
+        mc:Ignorable="d"
+        Title="ReportePintado" Height="450" Width="800" Background="#F3F3F3">
+    <DockPanel>
+
+        <ContentControl DockPanel.Dock="Top" Template="{StaticResource WindowHeader}" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Content="Cajon" Style="{StaticResource TableItemCell}"/>
+            <TextBox Grid.Column="1" Grid.ColumnSpan="3" Style="{StaticResource TableValueInputCell}"/>
+            <Button Grid.Column="4" Content="Buscar" Grid.ColumnSpan="3" />
+
+
+
+
+            <Label Grid.Row="2" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Stock para pintados TPS"/>
+            <DataGrid Grid.Row="3" Grid.ColumnSpan="16" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"
+                                  SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" 
+                                  HeadersVisibility="Column" RowDetailsVisibilityMode="Collapsed" ItemsSource="{Binding ListLockVerificationHistory}"
+                                  AreRowDetailsFrozen="False" AllowDrop="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#666666"                                  
+                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="11">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding  NameStatusLockVerification}" Header="{Binding Status, Source={StaticResource LanguageResources}}" Width="100" />
+                    <DataGridTextColumn Binding="{Binding  LastInspectionDate}" Header="{Binding DateInspection, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  UserAuthorization}" Header="{Binding Authorization, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  Comments}" Header="{Binding Comments, Source={StaticResource LanguageResources}}" Width="200"  />
+                    <DataGridTextColumn Binding="{Binding  UserLoggedIn}" Header="{Binding LoggedIn, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  OpenDateTime}" Header="{Binding OpenDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  AcceptDateTime}" Header="{Binding AcceptDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  idTrackingLock}" Header="{Binding TrackingLock, Source={StaticResource LanguageResources}}" Width="150"  />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            
+            
+            
+            
+            <Label Grid.Row="4" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Cajas Cargadas a nivel 2"/>
+            <DataGrid Grid.Row="5" Grid.ColumnSpan="16" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"
+                                  SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" 
+                                  HeadersVisibility="Column" RowDetailsVisibilityMode="Collapsed" ItemsSource="{Binding ListLockVerificationHistory}"
+                                  AreRowDetailsFrozen="False" AllowDrop="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#666666"                                  
+                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="11">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding  NameStatusLockVerification}" Header="{Binding Status, Source={StaticResource LanguageResources}}" Width="100" />
+                    <DataGridTextColumn Binding="{Binding  LastInspectionDate}" Header="{Binding DateInspection, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  UserAuthorization}" Header="{Binding Authorization, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  Comments}" Header="{Binding Comments, Source={StaticResource LanguageResources}}" Width="200"  />
+                    <DataGridTextColumn Binding="{Binding  UserLoggedIn}" Header="{Binding LoggedIn, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  OpenDateTime}" Header="{Binding OpenDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  AcceptDateTime}" Header="{Binding AcceptDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  idTrackingLock}" Header="{Binding TrackingLock, Source={StaticResource LanguageResources}}" Width="150"  />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Grid.Row="6" Grid.ColumnSpan="16" Style="{StaticResource ButtonsArea}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Cargar a pintado" />
+                </StackPanel>
+            </Label>
+
+
+
+            <Label Grid.Row="7" Grid.ColumnSpan="16" Style="{StaticResource Header}" Content="Reportes de caja"/>
+            <DataGrid Grid.Row="8" Grid.ColumnSpan="16" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False"
+                                  CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False"
+                                  SelectionMode="Single" SelectionUnit="FullRow" IsReadOnly="True" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" 
+                                  HeadersVisibility="Column" RowDetailsVisibilityMode="Collapsed" ItemsSource="{Binding ListLockVerificationHistory}"
+                                  AreRowDetailsFrozen="False" AllowDrop="False" GridLinesVisibility="All" HorizontalGridLinesBrush="#666666"                                  
+                                  VerticalGridLinesBrush="#666666" BorderThickness="0" FontSize="11">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding  NameStatusLockVerification}" Header="{Binding Status, Source={StaticResource LanguageResources}}" Width="100" />
+                    <DataGridTextColumn Binding="{Binding  LastInspectionDate}" Header="{Binding DateInspection, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  UserAuthorization}" Header="{Binding Authorization, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  Comments}" Header="{Binding Comments, Source={StaticResource LanguageResources}}" Width="200"  />
+                    <DataGridTextColumn Binding="{Binding  UserLoggedIn}" Header="{Binding LoggedIn, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  OpenDateTime}" Header="{Binding OpenDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  AcceptDateTime}" Header="{Binding AcceptDateTime, Source={StaticResource LanguageResources}}" Width="150"  />
+                    <DataGridTextColumn Binding="{Binding  idTrackingLock}" Header="{Binding TrackingLock, Source={StaticResource LanguageResources}}" Width="150"  />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Grid.Row="9" Grid.ColumnSpan="16" Style="{StaticResource ButtonsArea}">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Reportes de caja" />
+                </StackPanel>
+            </Label>
+
+
+
+
+
+
+
+
+        </Grid>
+
+    </DockPanel>
+    
+ 
+</Window>
